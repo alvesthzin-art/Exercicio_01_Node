@@ -1,25 +1,44 @@
-🧮 Calculadora de Soma Simples com Node.js
-Este é o meu primeiro exercício prático em JavaScript rodando no lado do servidor (Node.js). O objetivo foi aprender a interagir com o usuário através do terminal, recebendo dados e processando operações matemáticas.
+# 🧮 Terminal Math: Soma Dinâmica com Node.js
 
-📝 Descrição do Projeto
-O script solicita o nome do usuário e três valores numéricos. Após a entrada dos dados, o programa realiza a soma desses valores e exibe o resultado final no console.
+Este projeto marca o meu início no desenvolvimento **Backend** utilizando **Node.js**. O objetivo foi criar uma ferramenta de CLI (Command Line Interface) que interage com o usuário diretamente pelo terminal para processar operações matemáticas simples.
 
-🛠️ Tecnologias e Conceitos Utilizados
-- Node.js: Ambiente de execução JavaScript fora do navegador.
+> **Status:** ✅ Concluído (Primeiros passos no Node.js)
 
-- Módulo readline: Biblioteca nativa do Node.js para ler dados de um fluxo (como o teclado).
+---
 
-- Funções de Callback: Técnica para garantir que uma pergunta só seja feita após a resposta da anterior.
+### 📝 Descrição do Projeto
+O script foi desenvolvido para exercitar a captura de dados via fluxo de entrada do sistema. Ele solicita o nome do usuário e três valores numéricos, realiza o tratamento desses dados e entrega a soma total em uma mensagem personalizada no console.
 
-- Manipulação de Tipos: Uso do parseInt() para converter textos (Strings) em números inteiros, permitindo a soma matemática.
+### 🛠️ Tecnologias e Conceitos Aplicados
 
-🏗️ Como o Código Funciona
-O fluxo do programa segue uma estrutura de "escada" (conhecida como Callback Hell, algo que aprenderei a simplificar no futuro!), garantindo a ordem das perguntas:
+- **Node.js:** Ambiente de execução para rodar JavaScript no servidor.
+- **Interface Readline:** Utilização do módulo nativo `readline` para gerenciar a entrada (`stdin`) e saída (`stdout`) de dados.
+- **Assincronia (Callbacks):** Aplicação de funções de callback para controlar o fluxo de perguntas e respostas de forma sequencial.
+- **Tipagem Dinâmica e Conversão:** Tratamento de dados com `parseInt()` para garantir a integridade das operações aritméticas entre Strings e Inteiros.
 
-1 - Criação da Interface: Configuramos a entrada (stdin) e saída (stdout) de dados.
+### 🏗️ Arquitetura do Fluxo
 
-2 - Captura de Dados: O método .question() pausa a execução e espera o usuário digitar algo.
+Para garantir que o Node.js aguardasse a resposta do usuário antes de seguir para a próxima linha, o código foi estruturado em camadas:
 
-3 - Processamento: Os valores recebidos como texto são transformados em números.
+1.  **Configuração de I/O:** Inicialização da interface de leitura do terminal.
+2.  **Captura de Input:** Sequenciamento de perguntas utilizando o método `.question()`.
+3.  **Lógica Matemática:** Conversão de tipos e processamento da soma.
+4.  **Gerenciamento de Memória:** Fechamento da interface com `.close()` para encerrar o processo no sistema operacional.
 
-4 - Encerramento: O método .close() finaliza a interface para que o programa não fique rodando infinitamente.
+
+---
+
+👨‍💻 Desenvolvedor
+<table style="border: none;">
+<tr>
+<td align="center">
+<a href="#">
+<img src="https://github.com/alvesthzin-art.png" width="100px;" alt="Avatar"/><br />
+<sub><b>@alvesthzin-art</b></sub>
+</a>
+</td>
+</tr>
+</table>
+
+ 
+*Desenvolvido durante minha jornada de estudos no SENAI Jandira.*
